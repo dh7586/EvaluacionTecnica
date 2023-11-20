@@ -1,0 +1,191 @@
+input[type="number"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; 
+    /* background: rgb(0 100 0 / 0.1) !important; */    
+}
+
+body {
+    color: #222;
+}
+
+a, button {
+    all: unset;
+    cursor: pointer;
+}
+
+.container {
+    width: 1300px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/* --> HEADER <-- */
+.header {
+    background-color: #202934;    
+}
+
+/* --> HEADER: NAV <-- */
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav__titulo {
+    color: #fff;
+    margin-right: 20px;
+    user-select: none;
+}
+
+.nav__a {
+    padding: 20px;
+    color: #fff;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav__a--selected {
+	background-color: #fff;
+    color: #222;
+}
+
+/* --> MAIN <-- */
+.main__container {
+    display: grid;
+    gap: 30px;
+    padding: 30px 0;
+    justify-items: center;
+    font-size: 0.9rem;
+}
+
+.main__titulo {
+	font-size: 2.3rem;
+	line-height: 35px;
+}
+
+/* --> MAIN:TABLE <-- */
+.table {
+    border-collapse: collapse;    
+}
+
+.table th {
+    border: 1px solid #222;
+    background-color: #202934;
+    color: #fff;
+    padding: 10px;
+}
+
+.table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.table__td--center {
+    text-align: center;
+}
+
+.table__th--nombre { width: 155px; }
+.table__th--descripcion { width: 155px; }
+.table__th--precio { width: 80px; }
+.table__th--stock { width: 70px; }
+.table__th--fechaCre { width: 190px; }
+.table__th--fechaAct { width: 190px; }
+.table__th--acciones {width: 205px; }
+
+.table tbody tr:nth-child(even) {
+    background-color: #eee;
+}
+
+.table tbody tr:last-child {
+    border-bottom: 2px solid #202934;
+}
+
+/* -->MAIN:TABLE BUTTONS<-- */
+.button__wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.button {
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.button--blue { background-color: #0785ec; }
+.button--red { background-color: #da2a2a; }
+.button--green { 
+	background-color: #2bb432;
+}
+
+/* || crear_producto.html || */
+
+/* --> MAIN:FORM <-- */
+.main__wrapper {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.main__form {
+    width: 600px;
+    display: grid;
+    gap: 15px;
+    padding: 15px;
+}
+
+.main__select {
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.main__wrap {
+    display: grid;    
+}
+
+.main__wrap label {
+    padding-bottom: 10px;
+}
+
+.main__wrap input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.main__wrap input:focus {
+    border: 1px solid #202934;
+}
+
+.main__submit {
+	border: 0px;
+	text-align: center;
+	margin-top: 5px;
+}
+
+
+@media (hover :hover) {
+
+    /* --> MAIN: NAV <-- */
+    .nav__a:hover,
+    .nav__a:focus {
+        background-color: #fff;
+        color: #222;
+    }
+
+    /* -->MAIN:TABLE BUTTONS<-- */
+    .button--blue:hover { background-color: #0869b9; }
+    .button--red:hover { background-color: #a31e1e; }
+    .button--green:hover { background-color: #1f8a24; }
+    
+    /* || crear_producto.html || */
+
+	/* --> MAIN:FORM <-- */
+	.main__wrap input:hover {
+    	border: 1px solid #202934;
+	}
+}
